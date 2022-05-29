@@ -21,8 +21,7 @@ function myButtonClicked() {
   var firstInteger = document.getElementById("integer-one").value
   var secondInteger = document.getElementById("integer-two").value
 
-  
-    // process and output
+  // process and output
   let counter = 0
   var answer = 0
   var firstIntegerAsInt = parseInt(firstInteger)
@@ -31,5 +30,5 @@ function myButtonClicked() {
     answer = answer + firstIntegerAsInt
     counter++
   }
-  document.getElementById("loop").innerHTML = "The number is " + (answer)
+  document.getElementById("loop").innerHTML = "The number is " + answer
 }
