@@ -1,21 +1,35 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
+// Copyright (c) 2022 Emmanuel.Fofeyin All rights reserved
 //
-// Created by: Mr. Coxall
-// Created on: Sep 2020
+// Created by: Emmanuel.Fofeyin
+// Created on: Apr 2022
 // This file contains the JS functions for index.html
 
 /**
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/github-page-pwa/sw.js", {
-    scope: "/github-page-pwa/",
+  navigator.serviceWorker.register("/ICS20-Unit5-06-HTML/sw.js", {
+    scope: "/ICS20-Unit5-06-HTML/",
   })
 }
 
 /**
- * This function displays an alert.
+ * This function calculates if you get free admission
  */
 function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+  // input
+  var firstInteger = document.getElementById("integer-one").value
+  var secondInteger = document.getElementById("integer-two").value
+
+  
+    // process and output
+  let counter = 0
+  var answer = 0
+  var firstIntegerAsInt = parseInt(firstInteger)
+  while (counter < secondInteger) {
+    console.log("Once through loop:" + counter)
+    answer = answer + firstIntegerAsInt
+    counter++
+  }
+  document.getElementById("loop").innerHTML = "The number is " + (answer)
 }
